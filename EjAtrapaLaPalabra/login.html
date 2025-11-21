@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Atrapa la Palabra - Login</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/main.js" type="module"></script>
+  </head>
+  <body>
+    <div class="login-container">
+      <h2 id="formTitle">Cargando...</h2>
+      <form id="loginForm">
+        <input type="text" id="usuario" placeholder="Nombre usuario" required />
+        <input
+          type="password"
+          id="contraseña"
+          placeholder="Contraseña"
+          required
+        />
+        <button type="submit" id="submitBtn">Añadir</button>
+      </form>
+      <p id="errorMsg" style="color: red; display: none"></p>
+    </div>
+  </body>
+</html>

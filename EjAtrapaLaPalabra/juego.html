@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atrapa la Palabra - Juego</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="game-container">
+      <div id="ui-layer">
+        <div>Puntos: <span id="score">0</span></div>
+        <div>Vidas: <span id="lives">3</span></div>
+        <div>Tu Mejor: <span id="best-score">0</span></div>
+        <div>Global: <span id="global-best-score">0</span></div>
+      </div>
+
+      <div id="input-area">
+        <input
+          type="text"
+          id="word-input"
+          placeholder="Escribe aquí..."
+          autofocus
+          autocomplete="off"
+        />
+      </div>
+
+      <div id="game-over-screen" class="hidden">
+        <h1>¡Juego Terminado!</h1>
+        <p>Puntuación Final: <span id="final-score">0</span></p>
+        <p>Tu Mejor Puntuación: <span id="final-best-score">0</span></p>
+        <p>Récord Global: <span id="final-global-best-score">0</span></p>
+        <button id="restart-btn">Jugar de Nuevo</button>
+      </div>
+    </div>
+    <script type="module" src="js/game.js"></script>
+  </body>
+</html>
