@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Task Manager Pro</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="main.js" type="module"></script>
+  </head>
+  <body>
+    <section id="task-form">
+      <h2>Nueva tarea</h2>
+      <form id="task-form">
+        <input type="text" name="title" placeholder="Título" required />
+        <input type="text" name="description" placeholder="Descripción" />
+        <select name="priority">
+          <option value="low">Baja</option>
+          <option value="normal" selected>Normal</option>
+          <option value="high">Alta</option>
+        </select>
+        <button type="submit">Añadir</button>
+      </form>
+    </section>
+
+    <section id="task-list-section">
+      <h2>Mis tareas</h2>
+      <ul id="task-list"></ul>
+    </section>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
