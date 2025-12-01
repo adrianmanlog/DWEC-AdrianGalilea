@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - Sistema Verificado</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container dashboard-container">
+      <h2>Bienvenido, <span id="userName">Usuario</span></h2>
+
+      <!-- User View -->
+      <div id="userView" style="display: none">
+        <div class="user-info">
+          <h3>Tu Información</h3>
+          <p><strong>Nombre:</strong> <span id="profileName"></span></p>
+          <p><strong>Email:</strong> <span id="profileEmail"></span></p>
+          <p><strong>Rol:</strong> <span id="profileRole"></span></p>
+          <button id="editProfileBtn" style="margin-top: 1rem">
+            Editar Información
+          </button>
+        </div>
+      </div>
+
+      <!-- Admin View -->
+      <div id="adminView" style="display: none">
+        <h3>Gestión de Usuarios</h3>
+        <div class="search-container" style="margin-bottom: 1rem">
+          <input
+            type="text"
+            id="userSearch"
+            placeholder="Buscar usuario..."
+            style="
+              width: 100%;
+              padding: 0.8rem;
+              border: 1px solid #ddd;
+              border-radius: 5px;
+            "
+          />
+        </div>
+        <div style="overflow-x: auto">
+          <table id="usersTable">
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Rol</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Users will be populated here -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <button id="logoutBtn" class="logout-btn">Cerrar Sesión</button>
+    </div>
+
+    <!-- Edit Modal -->
+    <div id="editModal" class="modal">
+      <div class="modal-content">
+        <h3>Editar Usuario</h3>
+        <form id="editForm">
+          <input type="hidden" id="editId" />
+          <div class="form-group">
+            <label for="editName">Nombre</label>
+            <input type="text" id="editName" required />
+          </div>
+          <div class="form-group">
+            <label for="editEmail">Email</label>
+            <input type="email" id="editEmail" required />
+          </div>
+          <div class="form-group">
+            <label for="editRole">Rol</label>
+            <select
+              id="editRole"
+              style="
+                width: 100%;
+                padding: 0.8rem;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+              "
+            >
+              <option value="user">Usuario</option>
+              <option value="admin">Administrador</option>
+            </select>
+          </div>
+          <button type="submit">Guardar Cambios</button>
+          <button
+            type="button"
+            onclick="document.getElementById('editModal').style.display='none'"
+            style="background: #95a5a6; margin-top: 0.5rem"
+          >
+            Cancelar
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script type="module" src="js/dashboard.js"></script>
+  </body>
+</html>
